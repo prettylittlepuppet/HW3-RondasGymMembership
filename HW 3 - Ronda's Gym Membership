@@ -1,0 +1,74 @@
+/******************************************************************************
+Hanna Robertson                                                               *
+COP2000                                                                       *
+HW 3                                                                          *
+                                                                              *
+i lost my hw file due to a double saving and files overlapping. i couldnt     *
+figure out how to do the loop and by the time i got around to remaking this   *
+it was 10:30 and i was too tired to fix anything. sorry for the lack of work. *
+*******************************************************************************/
+#include<iostream>
+using namespace std;
+
+void membership_calculation(float);
+int get_users_membership();
+bool isMenuChoiceValid(int);
+
+int main()
+{
+
+	const int gold_membership = 1, silver_membership = 2; bronze_membership = 3;
+
+	switch (get_users_membership)
+	{
+	case(gold_membership):
+	{
+		membership_calculation(gold_membership_fee);
+	}
+	case(silver_membership):
+	{
+		membership_calculation(silver_membership_fee);
+	}
+	case(bronze_membership):
+	{
+		membership_calculation(bronze_membership_fee);
+	}
+
+	}
+	return 0;
+}
+
+void membership_calculation(float membership_fee)
+{
+	const float gold_membership_fee = 0.01;
+	const float silver_membership_fee = 0.02;
+	const float bronze_membership_fee = 0.04;
+	while (get_users_membership <= 10)
+		
+	// calculate stuff
+	// output stuff
+
+}
+
+int get_users_membership()
+{
+	int type_of_membership = 0;
+	input:
+	cout << "What membership level are you:";
+	cout << "Press 1 for Gold Membership";
+	cout << "Press 2 for Silver Membership";
+	cout << "Press 3 for Bronze Membership";
+	cin >> type_of_membership;
+
+	if (isMenuChoiceValid(type_of_membership))
+	{
+		return type_of_membership;
+	}
+	else(goto input)
+}
+
+bool isMenuChoiceValid(int menu_input)
+{
+	if (menu_input > 3 || menu_input < 1) return false;
+	else return true;
+}
